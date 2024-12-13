@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Shared Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Firebase 예제</title>
+    <!-- Firebase SDK 추가 -->
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"></script>
 </head>
 <body>
-    <h1>Welcome to My Shared Website</h1>
-    <p>This website is shared with others and can be edited collaboratively.</p>
-    <script src="script.js"></script>
+    <h1>학생 정보 입력</h1>
+    <form id="studentForm">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="info">정보:</label>
+        <input type="text" id="info" name="info" required><br><br>
+
+        <button type="submit">정보 제출</button>
+    </form>
+
+    <h2>입력된 정보</h2>
+    <ul id="studentList"></ul>
+
+    <!-- app.js 파일 연결 -->
+    <script src="app.js"></script>
 </body>
 </html>
